@@ -7,19 +7,20 @@ let petalScale3 = 0.1;
 let slider;
 
 function setup() {
-  createCanvas(400,400);
+  createCanvas(400, 400);
   flowerCenter1 = createVector(width / 4, height / 3);
   flowerCenter2 = createVector(width / 2, height / 2);
   flowerCenter3 = createVector(3 * width / 4, height / 4);
   noStroke();
   // Crea un elemento de entrada de tipo rango (barra deslizante)
   slider = createSlider (0, 1.5, 1.0, 0.01);
-  slider.position('width', '180px');
+  slider.position(-10, 1);
   slider.style('width', '180px');
 }
 
 function draw() {
   background(220, 255, 140);
+  
   // Obtiene el valor del rango y ajusta la escala de los pétalos
   let petalScale = slider.value();
 
